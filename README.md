@@ -1,5 +1,5 @@
 # Obsidia-Hub
-An open source script hub make purely for experienced roblox exploiters
+An open source script hub made purely for experienced roblox exploiters
 
 ## Running the script
 ```lua
