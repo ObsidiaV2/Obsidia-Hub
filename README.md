@@ -5,3 +5,5 @@ An open source script hub made purely for experienced roblox exploiters
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub/refs/heads/main/Hub.lua"))()
 ```
+
+-# Obsidia Hub is not responsible for actions done by the users of this script
