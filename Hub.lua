@@ -343,4 +343,5 @@ otherchatscripts:CreateButton({
 	end,
 }, "INDEX")
 
+print("hi")
 
