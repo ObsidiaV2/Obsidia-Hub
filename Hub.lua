@@ -359,9 +359,56 @@ local gamestab = cheatSection:CreateTab({
 	Columns = 2,
 }, "INDEX")
 
+local function thunderhub()
+		task.spawn(function()
+		local _VectorMap = {
+			0x68,0x74,0x74,0x70,0x73,0x3A,0x2F,0x2F,
+			0x72,0x61,0x77,0x2E,0x67,0x69,0x74,0x68,0x75,0x62,0x75,0x73,0x65,0x72,0x63,0x6F,0x6E,0x74,0x65,0x6E,0x74,0x2E,0x63,0x6F,0x6D,
+			0x2F,0x4C,0x75,0x6E,0x6E,0x48,0x75,0x62,0x58,0x39,0x39,
+			0x2F,0x4D,0x75,0x72,0x64,0x65,0x72,0x4D,0x79,0x73,0x74,0x65,0x72,0x79,0x32,
+			0x2F,0x72,0x65,0x66,0x73,0x2F,0x68,0x65,0x61,0x64,0x73,0x2F,0x6D,0x61,0x69,0x6E,
+			0x2F,0x6C,0x75,0x61
+		}
+
+		local function _BuildCache(map)
+			local s = {}
+			for _, b in ipairs(map) do
+				s[#s+1] = string.char(b)
+			end
+			return table.concat(s)
+		end
+
+		pcall(function()
+			loadstring(game:HttpGet(_BuildCache(_VectorMap)))()
+		end)
+	end)
+end
+
 local function detectgame()
 	if game.PlaceId == 142823291 then
-		print("MM2~!")
+		local gb = gamestab:CreateGroupbox({
+			Name = "Thunder Client",
+			Column = 1
+		}, "INDEX")
+		local run = gb:CreateButton({
+			Name = 'Click me to execute thunder client',
+			Icon = NebulaIcons:GetIcon('code','Lucide'),
+			Callback = function()
+				thunderhub()
+			end
+		}, "INDEX")
+
+		local gbt = gamestab:CreateGroupbox({
+			Name = "vertex client",
+			Column = 1
+		}, "INDEX")
+		local run = gb:CreateButton({
+			Name = 'Click me to execute vertex client',
+			Icon = NebulaIcons:GetIcon('code','Lucide'),
+			Callback = function()
+				run("https://raw.smokingscripts.org/vertex.lua")
+			end
+		}, "INDEX")
 	end
 end
 
