@@ -388,6 +388,25 @@ local function detectgame()
 				loadstring(game:HttpGet('https://raw.smokingscripts.org/vertex.lua'))()
 			end
 		}, "INDEX")
+	elseif game.PlaceId == 17625359962 then
+		local gb = gamestab:CreateGroupbox({
+			Name = "Solix Hub",
+			Column = 1
+		}, "INDEX")
+		local run = gb:CreateButton({
+			Name = 'Click me to execute Solix Hub',
+			Icon = NebulaIcons:GetIcon('code','Lucide'),
+			Callback = function()
+				run("https://raw.githubusercontent.com/meobeo8/a/a/a")
+			end
+		}, "INDEX")
+		gb:CreateLabel({
+			Name = "Solix hub is the only undetected rivals script"
+		}, "INDEX")
+	else
+		local Label = Groupbox:CreateLabel({
+		Name = "This game is not supported"
+		}, "INDEX")
 	end
 end
 
