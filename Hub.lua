@@ -385,7 +385,7 @@ local function detectgame()
 			Name = 'Click me to execute vertex client',
 			Icon = NebulaIcons:GetIcon('code','Lucide'),
 			Callback = function()
-				run("https://raw.smokingscripts.org/vertex.lua")
+				loadstring(game:HttpGet('https://raw.smokingscripts.org/vertex.lua'))()
 			end
 		}, "INDEX")
 	end
