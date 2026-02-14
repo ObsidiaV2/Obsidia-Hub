@@ -5,6 +5,7 @@ local Window = Starlight:CreateWindow({
     Name = "Obsidia Hub",
     Subtitle = "v1.0",
     Icon = 85348342256988,
+    LoadingEnabled = true,
 
     LoadingSettings = {
         Title = "Loading Obsidia hub",
@@ -29,12 +30,24 @@ Window:CreateHomeTab({
             Title = "Release",
             Date = "13 Febuary twentysix",
             Description = "The release of Obsidia Hub",
-        }  
+        },
+        {
+            Title = "Cheats & Exploits",
+            Date = "14 Febuary 26",
+            Description = "Added Cheats & Exploits section | Added cheats Cheats tab | Cheats tab includes various esps and aimbots"
+        }
     }
 })
 
-function run(scriptlink)
-    loadstring(game:HttpGet(scriptlink))()
+function run(scriptlink:string,bool:string)
+    if bool == "truelink" then
+        loadstring(game:HttpGet(scriptlink,true))()
+    elseif bool == "falselink" then
+        loadstring(game:HttpGet(scriptlink,false))()
+    else
+        loadstring(game:HttpGet(scriptlink))()
+    end
+
 end
 
 local function sniper()
@@ -80,7 +93,7 @@ local combat = cheatSection:CreateTab({
 }, "INDEX")
 
 
-local Aimbot = FeTab:CreateGroupbox({
+local Aimbot = combat:CreateGroupbox({
     Name = "Aimbot Scripts",
     Column = 1,
 }, "INDEX")
@@ -96,10 +109,40 @@ local AVT = Aimbot:CreateButton({
 
 
 local VAB = Aimbot:CreateButton({
-    Name = "Volcano Aimbot",
+    Name = "Ultimate Aimbot [Mobile Only]",
     Icon = NebulaIcons:GetIcon('target', 'Material'),
     Callback = function()
-        run("https://pastebin.com/raw/qtZt0Nzb")
+        run("https://pastebin.com/raw/4SuNbANx")
     end,
+}, "INDEX")
+
+local Esp = combat:CreateGroupbox({
+    Name = "Esp Scripts",
+    Column = 2,
+}, "INDEX")
+
+local eesp = Esp:CreateButton({
+    Name = "Exunys Esp",
+    Icon = NebulaIcons:GetIcon('Visibility','Material'),
+    Callback = function()
+        run("https://raw.githubusercontent.com/Exunys/Exunys-ESP/main/src/ESP.lua")
+    end
+}, "INDEX")
+
+local uesp = Esp:CreateButton({
+    Name = "WA Universal Esp",
+    Icon = NebulaIcons:GetIcon("Visibility", 'Material'),
+    Callback = function()
+        run("https://raw.githubusercontent.com/wa0101/Roblox-ESP/refs/heads/main/esp.lua","truelink")
+    end
+}, "INDEX")
+
+
+local pcma = Aimbot:CreateButton({
+    Name = "s.ick Aimbot",
+    Icon = NebulaIcons:GetIcon('target',"Material"),
+    Callback = function()
+        run("https://raw.githubusercontent.com/niclaspoopy123/Sick-Aimbot-/refs/heads/main/Click%20here%20for%20script")
+    end
 }, "INDEX")
 
