@@ -400,9 +400,9 @@ local function detectgame()
 
 		local gbt = gamestab:CreateGroupbox({
 			Name = "vertex client",
-			Column = 1
+			Column = 2
 		}, "INDEX")
-		local run = gb:CreateButton({
+		local run = gbt:CreateButton({
 			Name = 'Click me to execute vertex client',
 			Icon = NebulaIcons:GetIcon('code','Lucide'),
 			Callback = function()
