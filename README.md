@@ -1,6 +1,9 @@
 # Obsidia-Hub
 An open source script hub made purely for experienced roblox exploiters
 
+![Obsidia Hub Banner](bg.png)
+
+
 ## Running the script
 ```lua
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub/refs/heads/main/Hub.lua"))()
