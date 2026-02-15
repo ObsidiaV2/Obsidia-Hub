@@ -545,7 +545,10 @@ local function detectgame()
 	elseif game.PlaceId == 6961824067 then
 		addsupport("Ronix Hub","https://api.luarmor.net/files/v3/loaders/fda9babd071d6b536a745774b6bc681c.lua","Undetected",1)
 		addsupport("FTAP Hub","https://raw.githubusercontent.com/Bruhiscrazy/codespaces-blank/refs/heads/main/FTAPadminwatch.lua","Undetected",2)
-		
+	elseif game.PlaceId == 6516141723 or game.PlaceId == 110258689672367 or game.PlaceId == 6839171747 then
+		getgenv().SCRIPT_KEY = "KEYLESS"
+		addsupport("Doors Hub","https://api.jnkie.com/api/v1/luascripts/public/abd3cc54d2dc7de4a091fb19c8f4ea9e15e939e7ecc88b475e6956e8af94ad6f/download","Undetected",1)
+		addsupport("Cdoors Hub","https://rscripts.net/raw/cdoors-open-source_1770422176171_yXpiPhBInA.txt","Undetected",2,true)
 	else
 		local Label = Groupbox:CreateLabel({
 		Name = "This game is not supported"
