@@ -428,10 +428,13 @@ local function detectgame()
 		}, "INDEX")
 
 		gb:CreateLabel({
-			Name = "HoHo hub is the best blox fruits script"
+			Name = "HoHo hub is the best undetected blox fruits script"
 		}, "INDEX")
 		addsupport("Speed Hub X","https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua","Undetected",2,true)
 		addsupport("Quantom Onyx", "https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua","Undetected",1)
+	elseif game.PlaceId == 6872265039 then
+		addsupport("Cat Vape script",nil,"required to join discord and generate an account",1)
+		addsupport("Voidwaret","https://raw.githubusercontent.com/VapeVoidware/VWRewrite/master/NewMainScript.lua","Undetected",2)
 	else
 		local Label = Groupbox:CreateLabel({
 		Name = "This game is not supported"
