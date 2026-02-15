@@ -1,0 +1,1 @@
+notif = loadstring(game.HttpGetAsync())
