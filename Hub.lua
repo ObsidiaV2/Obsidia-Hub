@@ -8,7 +8,7 @@ local lplr = Players.LocalPlayer
 na = 'https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub/refs/heads/main/scripts/na.lua'
 canhe = 'https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub/refs/heads/main/scripts/canheuse.lua'
 
-bool = loadstring(game:HttpGet(canhe))()
+local bool = loadstring(game:HttpGet(canhe))()
 if bool == false and lplr.UserId == 9095127483 then
 	lplr:Kick("You arent allowed to use this rn")
 end
