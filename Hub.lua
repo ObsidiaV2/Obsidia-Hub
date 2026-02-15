@@ -414,7 +414,7 @@ local function detectgame()
 	elseif game.PlaceId == 17625359962 then
 		addsupport("Solix hub","https://raw.githubusercontent.com/meobeo8/a/a/a","Undetected",1)
 
-	elseif game.PlaceId == 4442272183 or 2753915549 or 7449423635 then
+	elseif game.PlaceId == 4442272183 or game.PlaceId == 2753915549 or game.PlaceId == 7449423635 then
 		local gb = gamestab:CreateGroupbox({
 			Name = "HoHo Hub",
 			Column = 1
