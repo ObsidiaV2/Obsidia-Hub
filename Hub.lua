@@ -37,26 +37,26 @@ Window:CreateHomeTab({
 	},
 })
 
-local function run(scriptlink: string, bool: string, async:boolean)
-	local link:string = scriptlink or na
-	local bo:string = bool or false
-	local asyn:boolean = async or false
+local function run(scriptlink: string, bool: string, async: boolean)
+	local link: string = scriptlink or "na"  
+	local bo: string = bool or "false"
+	local asyn: boolean = async or false
 
 	if asyn then
 		if bo == "truelink" then
-			loadstring(game:HttpGetAsync(scriptlink, true))()
+			loadstring(game:HttpGetAsync(link, true))()  
 		elseif bo == "falselink" then
-			loadstring(game:HttpGetAsync(scriptlink, false))()
+			loadstring(game:HttpGetAsync(link, false))()
 		else
-			loadstring(game:HttpGetAsync(scriptlink))()
+			loadstring(game:HttpGetAsync(link))()
 		end
 	else
 		if bo == "truelink" then
-			loadstring(game:HttpGet(scriptlink, true))()
+			loadstring(game:HttpGet(link, true))()  
 		elseif bo == "falselink" then
-			loadstring(game:HttpGet(scriptlink, false))()
+			loadstring(game:HttpGet(link, false))()
 		else
-			loadstring(game:HttpGet(scriptlink))()
+			loadstring(game:HttpGet(link))()
 		end
 	end
 end
