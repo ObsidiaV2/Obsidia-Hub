@@ -578,6 +578,9 @@ local function detectgame()
 	elseif game.PlaceId == 131623223084840 then
 		addsupport("Nexus Hub","https://raw.githubusercontent.com/Chavels123/nexus-hub/refs/heads/main/loader.lua","Undetected",1)
 		addsupport("Rat Hub X","https://raw.githubusercontent.com/Ratkinator/RatX/refs/heads/main/Loader.lua","Undetected",2,true)
+	elseif game.PlaceId == 1235533193 then
+		addsupport("Melon Hub","https://github.com/officialmelon/Melon-Hub/raw/refs/heads/main/Games/Bloxd.io/MVSD/main.lua","Undetected",1)
+		addsupport("??? Hub", "https://raw.githubusercontent.com/RadeonScripts/RadeonHubMain/main/MainRobloxExploit","Undetected",2)
 	else
 		local gadw = gamestab:CreateGroupbox({
 			Name = "N/A",
