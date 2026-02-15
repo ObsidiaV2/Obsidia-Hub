@@ -10,7 +10,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub
 ```
 
 # Detections
-If obsidia hub is detected in the game your playing use this script instead
+If obsidia hub is detected or crashing in the game your playing use this script instead
 
 ```lua
 getgenv().SecureMode = true

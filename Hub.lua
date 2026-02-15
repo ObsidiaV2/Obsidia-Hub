@@ -553,7 +553,7 @@ local function detectgame()
 		addsupport("Cdoors Hub","https://rscripts.net/raw/cdoors-open-source_1770422176171_yXpiPhBInA.txt","Undetected",2,true)
 	elseif game.PlaceId == 131623223084840 then
 		addsupport("Nexus Hub","https://raw.githubusercontent.com/Chavels123/nexus-hub/refs/heads/main/loader.lua","Undetected",1)
-		addsupport("Cyrus Hub","https://pastefy.app/2IpqNTnh/raw","Undetected",2)
+		addsupport("Rat Hub X","https://raw.githubusercontent.com/Ratkinator/RatX/refs/heads/main/Loader.lua","Undetected",2,true)
 	else
 		local gadw = gamestab:CreateGroupbox({
 			Name = "N/A",
