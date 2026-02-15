@@ -393,9 +393,11 @@ local function addsupport(scriptname,script,undetected,column,am)
 			end
 		end
 	}, "INDEX")
-	gb:CreateLabel({
-		Name = scriptname.." is "..undetected
-	}, "INDEX")
+	local Paragraph = gb:CreateParagraph({
+    Name = scriptname,
+    Content = scriptname.."is"..undetected,
+
+}, "INDEX")
 end
 
 local scripts = TabSection:CreateTab({
@@ -535,7 +537,7 @@ local function detectgame()
 		addsupport("Speed Hub X","https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua","Undetected",2,true)
 		addsupport("Quantom Onyx", "https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua","Undetected",1)
 	elseif game.PlaceId == 6872265039 then
-		addsupport("Cat Vape script",nil,"required to join discord and generate an account",1)
+		addsupport("Cat Vape script",nil,"required to join discord and generate an account gg/catvape",1)
 		addsupport("Voidware","https://raw.githubusercontent.com/VapeVoidware/VWRewrite/master/NewMainScript.lua","Undetected",2)
 	elseif game.PlaceId == 16732694052 then
 		addsupport("Zenith Hub","https://zenithhub.cloud/panel/script","Undetected",1)
