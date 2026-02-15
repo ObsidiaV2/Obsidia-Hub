@@ -13,8 +13,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub
 If obsidia hub is detected in the game your playing use this script instead
 
 ```lua
-    getgenv().SecureMode = true
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub/refs/heads/main/Hub.lua"))()
+getgenv().SecureMode = true
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub/refs/heads/main/Hub.lua"))()
 ```
 
 ```Obsidia Hub is not responsible for actions done by the users of this script```
