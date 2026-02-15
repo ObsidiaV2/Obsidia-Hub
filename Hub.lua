@@ -32,7 +32,7 @@ Window:CreateHomeTab({
 		{
 			Title = "Game Support!",
 			Date = "15 Febuary twentysix",
-			Description = "Added game support for 6 games in supportedgames.txt| Join the discord to suggest games"
+			Description = "Added game support for 6 games in supportedgames.txt"
 		}
 	},
 })
@@ -542,7 +542,10 @@ local function detectgame()
 	elseif game.PlaceId == 155615604 then
 		addsupport("Quail Hub","https://raw.githubusercontent.com/QuailLover/scripts/refs/heads/main/universal.lua","Undetected",1)
 		addsupport("Destroyer", "https://raw.githubusercontent.com/unrexl/Test/refs/heads/main/aimbotidk%3F","Undetected",2)
-
+	elseif game.PlaceId == 6961824067 then
+		addsupport("Ronix Hub","https://api.luarmor.net/files/v3/loaders/fda9babd071d6b536a745774b6bc681c.lua","Undetected",1)
+		addsupport("FTAP Hub","https://raw.githubusercontent.com/Bruhiscrazy/codespaces-blank/refs/heads/main/FTAPadminwatch.lua","Undetected",2)
+		
 	else
 		local Label = Groupbox:CreateLabel({
 		Name = "This game is not supported"
