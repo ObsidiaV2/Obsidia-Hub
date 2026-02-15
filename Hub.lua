@@ -2,6 +2,8 @@ local Starlight = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/starl
 local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/nebula-icon-library-loader"))()
 local UserInputService = game:GetService("UserInputService")
 
+na = 'https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub/refs/heads/main/scripts/na.lua'
+
 local Window = Starlight:CreateWindow({
 	Name = "Obsidia Hub",
 	Subtitle = "v1.0",
@@ -40,13 +42,27 @@ Window:CreateHomeTab({
 	},
 })
 
-local function run(scriptlink: string, bool: string)
-	if bool == "truelink" then
-		loadstring(game:HttpGet(scriptlink, true))()
-	elseif bool == "falselink" then
-		loadstring(game:HttpGet(scriptlink, false))()
+local function run(scriptlink: string, bool: string, async:boolean)
+	local link:string = scriptlink or na
+	local bo:string = bool or false
+	local asyn:boolean = async or false
+
+	if asyn then
+		if bo == "truelink" then
+			loadstring(game:HttpGetAsync(scriptlink, true))()
+		elseif bo == "falselink" then
+			loadstring(game:HttpGetAsync(scriptlink, false))()
+		else
+			loadstring(game:HttpGetAsync(scriptlink))()
+		end
 	else
-		loadstring(game:HttpGet(scriptlink))()
+		if bo == "truelink" then
+			loadstring(game:HttpGet(scriptlink, true))()
+		elseif bo == "falselink" then
+			loadstring(game:HttpGet(scriptlink, false))()
+		else
+			loadstring(game:HttpGet(scriptlink))()
+		end
 	end
 end
 
@@ -374,7 +390,7 @@ local function addsupport(scriptname,script,undetected,column,am)
 		Icon = NebulaIcons:GetIcon('code','Lucide'),
 		Callback = function()
 			if am then
-				run(script,true)
+				run(script,"truelink")
 			elseif am == 'f' then
 				run(script,false)
 			else
@@ -528,6 +544,10 @@ local function detectgame()
 		addsupport("Voidware","https://raw.githubusercontent.com/VapeVoidware/VWRewrite/master/NewMainScript.lua","Undetected",2)
 	elseif game.PlaceId == 16732694052 then
 		addsupport("Zenith Hub","https://zenithhub.cloud/panel/script","Undetected",1)
+	elseif game.PlaceId == 155615604 then
+		addsupport("Quail Hub","https://raw.githubusercontent.com/QuailLover/scripts/refs/heads/main/universal.lua","Undetected",1)
+		addsupport("Destroyer", "https://raw.githubusercontent.com/unrexl/Test/refs/heads/main/aimbotidk%3F","Undetected",2)
+
 	else
 		local Label = Groupbox:CreateLabel({
 		Name = "This game is not supported"
