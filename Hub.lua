@@ -266,6 +266,19 @@ local Fall = Groupbox:CreateButton({
 	end,
 }, "INDEX")
 
+local obby = FeTab:CreateGroupbox({
+	Name = "Obby Scripts",
+	Column = 2
+},"INDEX")
+
+local awh = Groupbox:CreateButton({
+	Name = "Auto Wall Hop",
+	Icon = NebulaIcons:GetIcon("person-standing","Lucide"),
+	Callback = function()
+		run("https://pastefy.app/sx5AZoGB/raw")
+	end
+}, "INDEX")
+
 local FSniper = Groupbox:CreateButton({
 	Name = "Fling Sniper",
 	Icon = NebulaIcons:GetIcon("person-standing", "Lucide"),
