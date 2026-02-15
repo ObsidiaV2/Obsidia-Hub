@@ -553,7 +553,7 @@ local function detectgame()
 		addsupport("Nexus Hub","https://raw.githubusercontent.com/Chavels123/nexus-hub/refs/heads/main/loader.lua","Undetected",1)
 		addsupport("Cyrus Hub","https://pastefy.app/2IpqNTnh/raw","Undetected",2)
 	else
-		local Label = Groupbox:CreateLabel({
+		local Label = gamestab:CreateLabel({
 		Name = "This game is not supported"
 		}, "INDEX")
 	end
