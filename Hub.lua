@@ -549,6 +549,9 @@ local function detectgame()
 		getgenv().SCRIPT_KEY = "KEYLESS"
 		addsupport("Doors Hub","https://api.jnkie.com/api/v1/luascripts/public/abd3cc54d2dc7de4a091fb19c8f4ea9e15e939e7ecc88b475e6956e8af94ad6f/download","Undetected",1)
 		addsupport("Cdoors Hub","https://rscripts.net/raw/cdoors-open-source_1770422176171_yXpiPhBInA.txt","Undetected",2,true)
+	elseif game.PlaceId == 131623223084840 then
+		addsupport("Nexus Hub","https://raw.githubusercontent.com/Chavels123/nexus-hub/refs/heads/main/loader.lua","Undetected",1)
+		addsupport("Cyrus Hub","https://pastefy.app/2IpqNTnh/raw","Undetected",2)
 	else
 		local Label = Groupbox:CreateLabel({
 		Name = "This game is not supported"
