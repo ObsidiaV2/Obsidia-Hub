@@ -434,7 +434,9 @@ local function detectgame()
 		addsupport("Quantom Onyx", "https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua","Undetected",1)
 	elseif game.PlaceId == 6872265039 then
 		addsupport("Cat Vape script",nil,"required to join discord and generate an account",1)
-		addsupport("Voidwaret","https://raw.githubusercontent.com/VapeVoidware/VWRewrite/master/NewMainScript.lua","Undetected",2)
+		addsupport("Voidware","https://raw.githubusercontent.com/VapeVoidware/VWRewrite/master/NewMainScript.lua","Undetected",2)
+	elseif game.PlaceId == 16732694052 then
+		addsupport("Zenith Hub","https://zenithhub.cloud/panel/script","Undetected",1)
 	else
 		local Label = Groupbox:CreateLabel({
 		Name = "This game is not supported"
