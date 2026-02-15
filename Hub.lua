@@ -1,5 +1,6 @@
 local Starlight = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/starlight"))()
 local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/nebula-icon-library-loader"))()
+local UserInputService = game:GetService("UserInputService")
 
 local Window = Starlight:CreateWindow({
 	Name = "Obsidia Hub",
@@ -385,6 +386,96 @@ local function addsupport(scriptname,script,undetected,column,am)
 		Name = scriptname.." is "..undetected
 	}, "INDEX")
 end
+
+local scripts = TabSection:CreateTab({
+	Name = "Scripts",
+	Icon = NebulaIcons:GetIcon("scroll-text", "Lucide"),
+	Columns = 2,
+}, "INDEX")
+
+gbth = scripts:CreateGroupbox({
+	Name = "Dev Tools",
+	Icon = NebulaIcons:GetIcon('wrench','Lucide'),
+	Column = 1,
+}, "INDEX")
+
+local Ketamine = gbth:CreateButton({
+	Name = 'Click me to execute Ketamine remote spy',
+	Icon = NebulaIcons:GetIcon('code','Lucide'),
+	Callback = function()
+		run("https://raw.githubusercontent.com/InfernusScripts/Ketamine/refs/heads/main/Ketamine.lua")
+	end
+}, "INDEX")
+
+local dex = gbth:CreateButton({
+	Name = 'Click me to execute dex ',
+	Icon = NebulaIcons:GetIcon('code','Lucide'),
+	Callback = function()
+		run("https://raw.githubusercontent.com/peyton2465/Dex/master/out.lua")
+	end
+}, "INDEX")
+
+local acfinder = gbth:CreateButton({
+	Name = 'Click me to execute Untimate Finder',
+	Icon = NebulaIcons:GetIcon('code','Lucide'),
+	Callback = function()
+		run("https://pastefy.app/MVGE6jSU/raw?part=ULTIMATE_FINDER")
+	end
+}, "INDEX")
+
+local scriptfinder = gbth:CreateButton({
+	Name = 'Click me to execute Script Finder',
+	Icon = NebulaIcons:GetIcon('code','Lucide'),
+	Callback = function()
+		run("https://pastefy.app/MVGE6jSU/raw?part=ULTIMATE_FINDER")
+	end
+}, "INDEX")
+
+local function hydroxide()
+	if UserInputService.MouseEnabled then
+		local owner = "Upbolt"
+		local branch = "revision"
+
+		local function webImport(file)
+			return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/Hydroxide/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
+		end
+
+		webImport("init")
+		webImport("ui/main")
+	else
+		local owner = "Hosvile"
+		local branch = "revision"
+
+		local function webImport(file)
+			return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/MC-Hydroxide/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
+		end
+
+		webImport("init")
+		webImport("ui/main")
+	end
+end
+
+local hydro = gbth:CreateButton({
+	Name = 'Click me to execute Hydroxide',
+	Icon = NebulaIcons:GetIcon('code','Lucide'),
+	Callback = function()
+		hydroxide()
+	end
+}, "INDEX")
+
+psr = scripts:CreateGroupbox({
+	Name = "Popular Scripts",
+	Icon = NebulaIcons:GetIcon('wrench','Lucide'),
+	Column = 1,
+}, "INDEX")
+
+local yeild = psr:CreateButton({
+	Name = 'Click me to execute infinite yeild',
+	Icon = NebulaIcons:GetIcon('code','Lucide'),
+	Callback = function()
+		run("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
+	end
+}, "INDEX")
 
 local function detectgame()
 	if game.PlaceId == 142823291 then
