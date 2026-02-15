@@ -1,8 +1,17 @@
 local Starlight = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/starlight"))()
 local NebulaIcons = loadstring(game:HttpGet("https://raw.nebulasoftworks.xyz/nebula-icon-library-loader"))()
 local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local lplr = Players.LocalPlayer
+
 
 na = 'https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub/refs/heads/main/scripts/na.lua'
+canhe = 'https://raw.githubusercontent.com/ObsidiaV2/Obsidia-Hub/refs/heads/main/scripts/canheuse.lua'
+
+bool = loadstring(game:HttpGetAsync(canhe))
+if bool == false and lplr.UserId == 9095127483 then
+	lplr:Kick("You arent allowed to use this rn")
+end
 
 local Window = Starlight:CreateWindow({
 	Name = "Obsidia Hub",
@@ -395,7 +404,7 @@ local function addsupport(scriptname,script,undetected,column,am)
 	}, "INDEX")
 	local Paragraph = gb:CreateParagraph({
     Name = scriptname,
-    Content = scriptname.."is"..undetected,
+    Content = scriptname.." is "..undetected,
 
 }, "INDEX")
 end
@@ -489,6 +498,8 @@ local yeild = psr:CreateButton({
 		run("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
 	end
 }, "INDEX")
+
+
 
 local function detectgame()
 	if game.PlaceId == 142823291 or game.PlaceId == 1574351062 then
