@@ -363,6 +363,29 @@ local function thunderhub()
 	run("https://raw.githubusercontent.com/Roman34296589/SnapSanixHUB/refs/heads/main/SnapSanixHUB.lua")
 end
 
+local function addsupport(scriptname,script,undetected,column,am)
+	local gb = gamestab:CreateGroupbox({
+			Name = scriptname,
+			Column = column
+	}, "INDEX")
+	local run = gb:CreateButton({
+		Name = 'Click me to execute '..scriptname,
+		Icon = NebulaIcons:GetIcon('code','Lucide'),
+		Callback = function()
+			if am then
+				run(script,true)
+			elseif am == 'f' then
+				run(script,false)
+			else
+				run(script)
+			end
+		end
+	}, "INDEX")
+	gb:CreateLabel({
+		Name = scriptname.." is "..undetected
+	}, "INDEX")
+end
+
 local function detectgame()
 	if game.PlaceId == 142823291 then
 		local gb = gamestab:CreateGroupbox({
@@ -389,20 +412,26 @@ local function detectgame()
 			end
 		}, "INDEX")
 	elseif game.PlaceId == 17625359962 then
+		addsupport("Solix hub","https://raw.githubusercontent.com/meobeo8/a/a/a","Undetected",1)
+
+	elseif game.PlaceId == 2753915549 then
 		local gb = gamestab:CreateGroupbox({
-			Name = "Solix Hub",
+			Name = "HoHo Hub",
 			Column = 1
 		}, "INDEX")
 		local run = gb:CreateButton({
-			Name = 'Click me to execute Solix Hub',
+			Name = 'Click me to execute HoHo hub',
 			Icon = NebulaIcons:GetIcon('code','Lucide'),
 			Callback = function()
-				run("https://raw.githubusercontent.com/meobeo8/a/a/a")
+				run("https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI")
 			end
 		}, "INDEX")
+
 		gb:CreateLabel({
-			Name = "Solix hub is the only undetected rivals script"
+			Name = "HoHo hub is the best blox fruits script"
 		}, "INDEX")
+		addsupport("Speed Hub X","https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua","Undetected",2,true)
+		addsupport("Quantom Onyx", "https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua","Undetected",1)
 	else
 		local Label = Groupbox:CreateLabel({
 		Name = "This game is not supported"
