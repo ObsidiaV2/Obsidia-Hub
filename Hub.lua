@@ -24,21 +24,16 @@ Window:CreateHomeTab({
 	SupportedExecutors = { "Obsidia", "Delta", "Volcano", "Ronix", "Xeno", "Bunni", "Bytebreaker", "Wave", "Solara" },
 	UnsupportedExecutors = {},
 
-	DiscordInvite = "1234",
+	DiscordInvite = "zwcJ4N5VjA",
 	Backdrop = nil,
 
 	IconStyle = 1,
 	Changelog = {
 		{
-			Title = "Release",
-			Date = "13 Febuary twentysix",
-			Description = "The release of Obsidia Hub",
-		},
-		{
-			Title = "Cheats & Exploits",
-			Date = "14 Febuary 26",
-			Description = "Added Cheats & Exploits section | Added cheats Cheats tab | Cheats tab includes various esps and aimbots",
-		},
+			Title = "Game Support!",
+			Date = "15 Febuary twentysix",
+			Description = "Added game support for 6 games in supportedgames.txt| Join the discord to suggest games"
+		}
 	},
 })
 
@@ -494,7 +489,7 @@ local yeild = psr:CreateButton({
 }, "INDEX")
 
 local function detectgame()
-	if game.PlaceId == 142823291 then
+	if game.PlaceId == 142823291 or game.PlaceId == 1574351062 then
 		local gb = gamestab:CreateGroupbox({
 			Name = "Thunder Client",
 			Column = 1
