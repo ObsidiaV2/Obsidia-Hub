@@ -1,0 +1,6 @@
+detected in murderers vs sheriffs duels
+
+scripts:
+
+Melon Hub: loadstring(game:HttpGet("https://github.com/officialmelon/Melon-Hub/raw/refs/heads/main/Games/Bloxd.io/MVSD/main.lua"))()
+??? Hub: loadstring(game:HttpGet("https://raw.githubusercontent.com/RadeonScripts/RadeonHubMain/main/MainRobloxExploit"))()
